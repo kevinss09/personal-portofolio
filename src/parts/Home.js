@@ -22,7 +22,7 @@ export default function Home() {
 								start-ups to sucesfully reaching their maximum potential by
 								providing the best websites and online system for them.
 							</p>
-							<div className="button mt-6 flex flex-row items-center justify-center">
+							<div className="button mt-6 flex flex-row items-center justify-start">
 								<button
 									type="button"
 									class="btn bg-gray-700 border border-white hover:bg-white hover:text-gray-700 flex flex-row items-center justify-center  cursor-pointer py-2 px-4 rounded leading-6 text-white font-normal text-center whitespace-nowrap transition"
