@@ -1,17 +1,39 @@
 import React from "react";
+import { Link } from "react-scroll";
 
-export default function Projects() {
+export default function Projects({ theme }) {
 	return (
 		<section id="Projects">
-			<div className="min-h-screen bg-[#ebeeee]">
-				<div className="h-full w-full md:px-60 md:py-44 py-16 px-10 text-center">
-					<h1 className="text-5xl font-bold text-[#161d1d]">Projects</h1>
-					<div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-12">
+			<div
+				className={[
+					"min-h-screen",
+					theme ? "bg-[#303336]" : "bg-[#E6E6E6]",
+				].join(" ")}
+			>
+				<div className="h-full w-full lg:px-60 lg:pb-44 lg:pt-32 py-16 px-10 text-center">
+					<h1
+						className={[
+							"text-5xl font-bold",
+							theme ? "text-white" : "text-[#303336]",
+						].join(" ")}
+					>
+						Projects
+					</h1>
+					<div className="grid lg:grid-cols-3 grid-cols-1 gap-8 mt-16">
 						{/* Start one card of the object  */}
 						<div className="flex items-center justify-center my-4 relative">
-							<div className="card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105 bg-white">
+							<div
+								className={[
+									"card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105",
+									theme ? "bg-white" : "bg-white",
+								].join(" ")}
+							>
 								<div className="card-header h-36 overflow-hidden bg-white ">
-									<a href="#" className="no-underline">
+									<a
+										href="https://github.com/kevinss09/personal-portofolio"
+										target="_blank"
+										className="no-underline"
+									>
 										<img
 											src="/images/personal-website.png"
 											alt="my web"
@@ -20,8 +42,13 @@ export default function Projects() {
 									</a>
 								</div>
 								<div className="card-body relative h-60 p-5 hover:h-[280px]">
-									<h2 className="card-title m-0 pb-3 text-black text-xl font-bold uppercase">
-										<a href="">Portofolio</a>
+									<h2 className="card-title m-0 pb-3 text-xl font-bold uppercase text-black">
+										<a
+											href="https://github.com/kevinss09/personal-portofolio"
+											target="_blank"
+										>
+											Portofolio
+										</a>
 									</h2>
 									<div className="card-subtitle m-0 text-lg pb-3">
 										Website created using React and Tailwind css
@@ -37,9 +64,18 @@ export default function Projects() {
 
 						{/* Start one card of the object  */}
 						<div className="flex items-center justify-center my-4 relative">
-							<div className="card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105 bg-white">
+							<div
+								className={[
+									"card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105",
+									theme ? "bg-white" : "bg-white",
+								].join(" ")}
+							>
 								<div className="card-header h-36 overflow-hidden bg-white ">
-									<a href="#" className="no-underline">
+									<a
+										href="https://github.com/kevinss09/daily-blog"
+										className="no-underline"
+										target="_blank"
+									>
 										<img
 											src="/images/blog-web.png"
 											alt="myBlog"
@@ -49,7 +85,12 @@ export default function Projects() {
 								</div>
 								<div className="card-body relative h-60 p-5 hover:h-[280px]">
 									<h2 className="card-title m-0 pb-3 text-black text-xl font-bold uppercase">
-										<a href="">blog Website</a>
+										<a
+											href="https://github.com/kevinss09/daily-blog"
+											target="_blank"
+										>
+											blog Website
+										</a>
 									</h2>
 									<div className="card-subtitle m-0 text-lg pb-3">
 										blog Website created using MERN Stack + Tailwind
@@ -65,9 +106,18 @@ export default function Projects() {
 
 						{/* Start one card of the object  */}
 						<div className="flex items-center justify-center my-4 relative">
-							<div className="card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105 bg-white">
+							<div
+								className={[
+									"card overflow-hidden rounded-2xl w-64 h-80 transition-all hover:scale-105",
+									theme ? "bg-white" : "bg-white",
+								].join(" ")}
+							>
 								<div className="card-header h-36 overflow-hidden bg-white ">
-									<a href="#" className="no-underline">
+									<a
+										href="https://github.com/kevinss09/food-commerce-web"
+										className="no-underline"
+										target="_blank"
+									>
 										<img
 											src="/images/e-commerce-web.png"
 											alt="my web"
@@ -77,7 +127,12 @@ export default function Projects() {
 								</div>
 								<div className="card-body relative h-60 p-5 hover:h-[280px]">
 									<h2 className="card-title m-0 pb-3 text-black text-xl font-bold uppercase">
-										<a href="">e commerce Web</a>
+										<a
+											href="https://github.com/kevinss09/food-commerce-web"
+											target="_blank"
+										>
+											e commerce Web
+										</a>
 									</h2>
 									<div className="card-subtitle m-0 text-lg pb-3">
 										Website created using React, Redux, Tailwind, and API

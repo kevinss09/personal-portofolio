@@ -1,22 +1,52 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 
-export default function Header() {
+export default function Header({ theme, setTheme }) {
 	const [toggle, setToggle] = useState(false);
+
 	return (
-		<nav className="bg-white p-3 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-screen z-50">
+		<nav
+			className={[
+				"p-3 shadow lg:flex lg:items-center lg:justify-between fixed top-0 left-0 w-screen z-50",
+				theme ? "bg-white" : "bg-[#1D1E20]",
+			].join(" ")}
+		>
 			<div className="left-side flex items-center justify-between">
-				<a to="/" className="cursor-pointer">
-					<span className="text-1xl font-heading text-black">
+				<Link to="#Home" className="cursor-pointer flex flex-row ">
+					<span className="lg:mx-2">
 						<img
 							src="/images/closeImage.jpg"
-							className="inline h-8 w-8 mr-2 ml-3 rounded-full"
+							className="inline h-8 w-8 lg:mr-2 mr-20 lg:ml-3 ml-1 rounded-full"
 							alt="People emoji"
 						/>
 					</span>
-				</a>
+					<h5
+						className={[
+							"text-2xl lg:mx-2 font-[Poppins]",
+							theme ? "text-black" : "text-[#DADADB]",
+						].join(" ")}
+					>
+						Kevin Sugeng
+					</h5>
+				</Link>
+				<span
+					className={[
+						"text-2xl pt-1 ml-1 inline-block cursor-pointer",
+						theme ? " " : "text-white",
+					].join(" ")}
+					onClick={() => setTheme((prev) => !prev)}
+				>
+					<ion-icon
+						name={theme ? "moon-outline" : "sunny-outline"}
+						className="duration-300"
+					></ion-icon>
+				</span>
 
 				<span
-					className="text-3xl right-0 pt-1 md:hidden block cursor-pointer"
+					className={[
+						"text-3xl right-0 pt-1 lg:hidden block cursor-pointer",
+						theme ? "text-black" : "text-white",
+					].join(" ")}
 					onClick={() => setToggle((prev) => !prev)}
 				>
 					<ion-icon
@@ -28,41 +58,97 @@ export default function Header() {
 
 			<ul
 				className={[
-					"right-side md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 px-2 md:mr-12 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-300 text-center",
+					"right-side lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 px-2 lg:mr-12 lg:opacity-100 opacity-0 top-[-400px] text-center",
 					toggle ? "opacity-100 top-[0px]" : "",
+					theme ? "bg-white" : "bg-[#1D1E20]",
 				].join(" ")}
 			>
-				<li className="mx-4 my-4 py-2 md:my-0 md:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent">
-					<a
-						href="#"
-						className="text-xl font-[Poppins] font-medium hover:text-blue-800 duration-300 "
+				<li
+					className={[
+						"nav-item mx-4 my-4 py-2 lg:my-0 lg:border-0 border border-t-transparent border-l-transparent border-r-transparent",
+						theme ? "border-b-black" : "border-b-white",
+					].join(" ")}
+				>
+					<Link
+						to="Home"
+						className={[
+							"element text-xl font-[Poppins] font-medium duration-300 relative cursor-pointer",
+							theme
+								? "text-[#1D1E20] hover:text-black themeBlack"
+								: "text-[#DADADB] hover:text-white themeWhite",
+						].join(" ")}
+						spy={true}
+						smooth={true}
+						offset={0}
+						duration={600}
+						onClick={() => setToggle((prev) => !prev)}
 					>
 						Home
-					</a>
+					</Link>
 				</li>
-				<li className="mx-4 my-4 pb-2 md:pt-2 md:my-0 md:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent">
-					<a
-						href="#About"
-						className="text-xl font-[Poppins] font-medium hover:text-blue-800 duration-300"
+				<li
+					className={[
+						"nav-item mx-4 my-4 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent",
+						theme ? "border-b-black" : "border-b-white",
+					].join(" ")}
+				>
+					<Link
+						to="About"
+						className={[
+							"element text-xl font-[Poppins] font-medium hover:text-gray-700 duration-300 relative cursor-pointer",
+							theme
+								? "text-[#1D1E20] hover:text-black themeBlack"
+								: "text-[#DADADB] hover:text-white themeWhite",
+						].join(" ")}
+						spy={true}
+						smooth={true}
+						offset={0}
+						duration={600}
+						onClick={() => setToggle((prev) => !prev)}
 					>
 						About
-					</a>
+					</Link>
 				</li>
-				<li className="mx-4 my-4 pb-2 md:pt-2 md:my-0 md:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent">
-					<a
-						href="#Resume"
-						className="text-xl font-[Poppins] font-medium hover:text-blue-800 duration-300"
+				<li
+					className={[
+						"nav-item mx-4 mt-4 mb-8 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent cursor-pointer",
+						theme ? "border-b-black" : "border-b-white",
+					].join(" ")}
+				>
+					<Link
+						to="Resume"
+						spy={true}
+						smooth={true}
+						offset={0}
+						duration={600}
+						className={[
+							" element text-xl font-[Poppins] font-medium hover:text-gray-700 duration-300 relative",
+							theme
+								? "text-[#1D1E20] hover:text-black themeBlack"
+								: "text-[#DADADB] hover:text-white themeWhite",
+						].join(" ")}
+						onClick={() => setToggle((prev) => !prev)}
 					>
 						Resume
-					</a>
+					</Link>
 				</li>
 
-				<a
-					href="#Contact"
-					className="bg-transparent border border-black hover:bg-blue-300 px-6 py-1 text-black duration-500 mx-4 font-heading rounded-sm text-xl mb-4 mt-4 md:mt-0 md:mb-0 hover:text-blue-800"
+				<Link
+					to="Contact"
+					spy={true}
+					smooth={true}
+					offset={-50}
+					duration={600}
+					className={[
+						"bg-transparent border font-[Poppins] px-6 py-1 duration-300 mx-4 my-4 font-heading rounded-sm text-xl lg:mt-0 lg:mb-0 cursor-pointer",
+						theme
+							? "text-[#1D1E20] border-[#1D1E20] hover:border-[#60666c] hover:bg-[#60666c] hover:text-white"
+							: "text-[#DADADB] border-[#DADADB] hover:border-white hover:bg-[#DADADB] hover:text-black",
+					].join(" ")}
+					onClick={() => setToggle((prev) => !prev)}
 				>
 					Contact me
-				</a>
+				</Link>
 			</ul>
 		</nav>
 	);

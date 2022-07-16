@@ -1,10 +1,13 @@
 import React from "react";
 
-export default function About() {
+export default function About({ theme }) {
 	return (
-		<section id="About" className="bg-white">
-			<div className="w-full h-full md:px-36 md:py-44 flex md:flex-row flex-col py-20 px-8">
-				<div className="md:w-1/3 h-full left-side-about">
+		<section
+			id="About"
+			className={["", theme ? "bg-[#303336]" : "bg-[#E6E6E6]"].join(" ")}
+		>
+			<div className="w-full h-full lg:px-36 lg:py-44 flex lg:flex-row flex-col pb-20 pt-28 px-8">
+				<div className="lg:w-1/3 h-full left-side-about">
 					<div className="flex items-center justify-center">
 						<img
 							src="./images/motorcycle.jpeg"
@@ -13,13 +16,35 @@ export default function About() {
 						/>
 					</div>
 				</div>
-				<div className="md:w-2/3 h-full right-side-about md:pl-14 mt-8 md:mt-0 px-4 text-center md:text-start">
-					<div className=" border border-b-black border-r-transparent border-l-transparent border-t-transparent pb-8">
-						<h1 class="text-5xl text-gray-700">About me</h1>
-						<h2 className="mt-1 text-gray-700 opacity-70">
+				<div className="lg:w-2/3 h-full right-side-about lg:pl-14 mt-8 lg:mt-0 px-4 text-center lg:text-start">
+					<div
+						className={[
+							"border-b pb-8",
+							theme ? "border-b-white" : "border-b-black",
+						].join(" ")}
+					>
+						<h1
+							className={[
+								"text-5xl",
+								theme ? "text-[#DADADB]" : "text-[#303336]",
+							].join(" ")}
+						>
+							About me
+						</h1>
+						<h2
+							className={[
+								"mt-1 opacity-70",
+								theme ? "text-[#C4C4C5]" : "text-[#303336]",
+							].join(" ")}
+						>
 							Fullstack web Developer
 						</h2>
-						<p className="mt-5 text-gray-700 text-base">
+						<p
+							className={[
+								"mt-5 text-base",
+								theme ? "text-[#C4C4C5]" : "text-[#303336]",
+							].join(" ")}
+						>
 							When I'm not developing new software, you can expect to find me
 							trying out different restaurants across the city. Yes! I'm a
 							foodie so hit me up if you got recommendations! I love hole in a
@@ -28,9 +53,26 @@ export default function About() {
 							include Real Estate and the Stock Market.
 						</p>
 					</div>
-					<div className="border border-b-black border-r-transparent border-l-transparent border-t-transparent pb-8 mt-5 justify-center">
-						<h1 class="text-5xl text-gray-700">What I do</h1>
-						<p className="mt-5 text-gray-700 text-base">
+					<div
+						className={[
+							"border-b pb-8 mt-5 justify-center",
+							theme ? "border-b-white" : "border-b-black",
+						].join(" ")}
+					>
+						<h1
+							className={[
+								"text-5xl",
+								theme ? "text-[#DADADB]" : "text-[#303336]",
+							].join(" ")}
+						>
+							What I do
+						</h1>
+						<p
+							className={[
+								"mt-5 text-base",
+								theme ? "text-[#C4C4C5]" : "text-[#303336]",
+							].join(" ")}
+						>
 							When I'm not developing new software, you can expect to find me
 							trying out different restaurants across the city. Yes! I'm a
 							foodie so hit me up if you got recommendations! I love hole in a
@@ -40,7 +82,12 @@ export default function About() {
 						</p>
 						<button
 							type="button"
-							class="btn-right text-white bg-gray-700 hover:bg-white hover:text-gray-700 cursor-pointer py-2 px-4 rounded leading-6 font-normal text-center whitespace-nowrap border hover:border-gray-700 transition mt-7"
+							className={[
+								"btn-right cursor-pointer py-2 px-4 rounded leading-6 font-normal text-center whitespace-nowrap border transition mt-7",
+								theme
+									? " text-[#C4C4C5] hover:bg-[#C4C4C5] border-[#C4C4C5] hover:text-[#303336]"
+									: "border-[#303336] text-[#303336] hover:bg-[#303336] hover:text-[#C4C4C5]",
+							].join(" ")}
 						>
 							Download Resume
 						</button>
