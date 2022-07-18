@@ -12,7 +12,14 @@ export default function Header({ theme, setTheme }) {
 			].join(" ")}
 		>
 			<div className="left-side flex items-center justify-between">
-				<Link to="#Home" className="cursor-pointer flex flex-row ">
+				<Link
+					to="Home"
+					className="cursor-pointer flex flex-row "
+					spy={true}
+					smooth={true}
+					offset={0}
+					duration={600}
+				>
 					<span className="lg:mx-2">
 						<img
 							src="/images/closeImage.jpg"
@@ -88,14 +95,14 @@ export default function Header({ theme, setTheme }) {
 				</li>
 				<li
 					className={[
-						"nav-item mx-4 my-4 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent",
+						"nav-item mx-4 my-4 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-t-transparent border-l-transparent border-r-transparent",
 						theme ? "border-b-black" : "border-b-white",
 					].join(" ")}
 				>
 					<Link
 						to="About"
 						className={[
-							"element text-xl font-[Poppins] font-medium hover:text-gray-700 duration-300 relative cursor-pointer",
+							"element text-xl font-[Poppins] font-medium duration-300 relative cursor-pointer",
 							theme
 								? "text-[#1D1E20] hover:text-black themeBlack"
 								: "text-[#DADADB] hover:text-white themeWhite",
@@ -111,7 +118,7 @@ export default function Header({ theme, setTheme }) {
 				</li>
 				<li
 					className={[
-						"nav-item mx-4 mt-4 mb-8 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-b-black border-t-transparent border-l-transparent border-r-transparent cursor-pointer",
+						"nav-item mx-4 mt-4 mb-8 pb-2 lg:pt-2 lg:my-0 lg:border-0 border border-t-transparent border-l-transparent border-r-transparent cursor-pointer",
 						theme ? "border-b-black" : "border-b-white",
 					].join(" ")}
 				>
@@ -122,7 +129,7 @@ export default function Header({ theme, setTheme }) {
 						offset={0}
 						duration={600}
 						className={[
-							" element text-xl font-[Poppins] font-medium hover:text-gray-700 duration-300 relative",
+							" element text-xl font-[Poppins] font-medium duration-300 relative",
 							theme
 								? "text-[#1D1E20] hover:text-black themeBlack"
 								: "text-[#DADADB] hover:text-white themeWhite",

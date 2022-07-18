@@ -39,18 +39,26 @@ export default function About({ theme }) {
 						>
 							Fullstack web Developer
 						</h2>
+						{/* When I'm not developing new software, you can expect to find me
+							trying out different restaurants across the city. Yes! I'm a
+							foodie so hit me up if you got recommendations! I love hole in a
+							wall places! Other than being a foodie, I enjoy catching up on the
+							latest news on the business world. One of my non-tech interests
+							include Real Estate and the Stock Market. */}
 						<p
 							className={[
 								"mt-5 text-base",
 								theme ? "text-[#C4C4C5]" : "text-[#303336]",
 							].join(" ")}
 						>
-							When I'm not developing new software, you can expect to find me
-							trying out different restaurants across the city. Yes! I'm a
-							foodie so hit me up if you got recommendations! I love hole in a
-							wall places! Other than being a foodie, I enjoy catching up on the
-							latest news on the business world. One of my non-tech interests
-							include Real Estate and the Stock Market.
+							When I'm not developing new website or work, you can find me
+							across Vancouver since i really love to stroll around and just
+							enjoy the beauty of it. I also do sports like basketball, but my
+							mainly one is badminton. Other than being a sports person, I enjoy
+							following the latest new about metaverse and web3. It's pretty
+							crazy if we once use to think that living in another reality and
+							have its own monetary is impossible, but anything is possible with
+							technology, right?
 						</p>
 					</div>
 					<div
@@ -73,12 +81,10 @@ export default function About({ theme }) {
 								theme ? "text-[#C4C4C5]" : "text-[#303336]",
 							].join(" ")}
 						>
-							When I'm not developing new software, you can expect to find me
-							trying out different restaurants across the city. Yes! I'm a
-							foodie so hit me up if you got recommendations! I love hole in a
-							wall places! Other than being a foodie, I enjoy catching up on the
-							latest news on the business world. One of my non-tech interests
-							include Real Estate and the Stock Market.
+							I'm a second year post secondary student pursuing bachelor degree
+							in computer science. I am passionate about building new things
+							especially technologywise. I start to code since 18 years old and
+							work as a freelace website developer in 2022.
 						</p>
 						<button
 							type="button"

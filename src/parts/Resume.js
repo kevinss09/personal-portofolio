@@ -105,27 +105,43 @@ export default function Resume({ theme }) {
 											theme ? "text-white" : "text-[#1D1E20]",
 										].join(" ")}
 									>
-										Fullstack Developer • January 2022 - Present
+										Fullstack Developer • Desember 2021 - Present
 									</p>
+									{/* Spearheaded and designed the Felix Checkout project as a
+										Technical Lead with a focus in overall security and
+										efficiency */}
 									<p
 										className={[
 											"mt-10 opacity-80 text-sm lg:text-base",
 											theme ? "text-white" : "text-[#1D1E20]",
 										].join(" ")}
 									>
-										Spearheaded and designed the Felix Checkout project as a
-										Technical Lead with a focus in overall security and
-										efficiency
+										Create and improve UI/UX website design that match the idea
+										and the ultimate goal of the companies.
 									</p>
-									<p
-										className={[
-											"mt-7 opacity-80 text-sm lg:text-base",
-											theme ? "text-white" : "text-[#1D1E20]",
-										].join(" ")}
-									>
-										Developed application using MERN (MongoDB, Express, React +
+									{/* Developed application using MERN (MongoDB, Express, React +
 										Redux, Node JS) stack to provide better scalability and
-										performance.
+										performance. */}
+									<p
+										className={[
+											"mt-7 opacity-80 text-sm lg:text-base",
+											theme ? "text-white" : "text-[#1D1E20]",
+										].join(" ")}
+									>
+										Developed website using MERN(MongoDB, Express.js, React.js,
+										Node.js) stack to provide a website that are faster and
+										stabile in terms of perfomance
+									</p>
+									{/* Created and ran UI automation test cases using Java and
+										Maven to reduce the need for manual testing. */}
+									<p
+										className={[
+											"mt-7 opacity-80 text-sm lg:text-base",
+											theme ? "text-white" : "text-[#1D1E20]",
+										].join(" ")}
+									>
+										Create and implement the backend of the website using
+										Node.js and MongoDB as it database.
 									</p>
 									<p
 										className={[
@@ -133,17 +149,9 @@ export default function Resume({ theme }) {
 											theme ? "text-white" : "text-[#1D1E20]",
 										].join(" ")}
 									>
-										Created and ran UI automation test cases using Java and
-										Maven to reduce the need for manual testing.
-									</p>
-									<p
-										className={[
-											"mt-7 opacity-80 text-sm lg:text-base",
-											theme ? "text-white" : "text-[#1D1E20]",
-										].join(" ")}
-									>
-										Developed and implemented WCF Web Services using C# and
-										ASP.NET for medical web applications.
+										{/* Ensuring cross-platform optimization for mobile phones. */}
+										Ensuring the website to be more user-friendly by making it
+										responsive in both cross-platform.
 									</p>
 								</div>
 							</div>

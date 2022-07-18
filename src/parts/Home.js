@@ -37,7 +37,7 @@ export default function Home({ theme }) {
 									theme ? "text-[#DADADB]" : "text-[#1E1E1E] opacity-60",
 								].join(" ")}
 							>
-								Fullstack WebApp Developer
+								Fullstack Website Developer
 							</h5>
 							<p
 								className={[
@@ -46,10 +46,10 @@ export default function Home({ theme }) {
 									theme ? "text-[#DADADB]" : "text-[#1E1E1E]",
 								].join(" ")}
 							>
-								Over the last 2 years, I've worked as a freelance fullstack
-								website developer in a team, helping different companies and
-								start-ups to sucesfully reaching their maximum potential by
-								providing the best websites and online system for them.
+								Over the last year, I've worked as a freelance fullstack website
+								developer helping different companies and start-ups reaching
+								their maximum potential by providing the best websites and
+								online system for them
 							</p>
 							<div className="button mt-6 flex sm:flex-col md:flex-row items-center lg:justify-start justify-center">
 								<Link
